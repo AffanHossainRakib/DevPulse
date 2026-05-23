@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node dist/server.mjs",
+    "start": "node dist/server.js",
     "dev": "tsx watch ./src/server.ts",
     "build": "tsup"
   },
@@ -16,7 +16,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/AffanHossainRakib/DevPulse/issues"
   },
