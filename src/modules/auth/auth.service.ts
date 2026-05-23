@@ -30,7 +30,6 @@ const findUserByEmail = async (email: string) => {
   const result = await pool.query(`SELECT * FROM users WHERE email = $1`, [
     email,
   ]);
-  delete result.rows[0]?.password;
   return result.rows[0];
 };
 
@@ -62,6 +61,8 @@ const authenticateUser = async (email: string, password: string) => {
   const refreshToken = jwt.sign(payload, config.refresh_secret as string, {
     expiresIn: "14d",
   });
+
+  if (user && user.password) delete user.password;
 
   return {
     accessToken,
