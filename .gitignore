@@ -4,3 +4,5 @@ express_learning
 node_modules
 dist
 .env
+.vercel
+.env*

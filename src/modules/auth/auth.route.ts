@@ -1,6 +1,6 @@
 import { Router } from "express";
-import requireFields from "../../middleware/validate";
-import { authController } from "./auth.controller";
+import requireFields from "../../middleware/validate.js";
+import { authController } from "./auth.controller.js";
 
 const router = Router();
 

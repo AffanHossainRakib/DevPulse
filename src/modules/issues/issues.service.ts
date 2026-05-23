@@ -1,4 +1,4 @@
-import { pool } from "../../db";
+import { pool } from "../../db/index.js";
 import type {
   IIssue,
   INewIssue,
@@ -6,8 +6,8 @@ import type {
   IReporterLite,
   IIssueWithReporter,
   IQueryFilters,
-} from "./issues.interface";
-import type { IRequestUser } from "../../types";
+} from "./issues.interface.js";
+import type { IRequestUser } from "../../types/index.js";
 
 const createIssue = async (payload: INewIssue): Promise<IIssue> => {
   const text = `INSERT INTO issues (title, description, type, status, reporter_id, created_at, updated_at) VALUES ($1,$2,$3,'open',$4,now(),now()) RETURNING *`;

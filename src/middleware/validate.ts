@@ -1,5 +1,5 @@
 import type { NextFunction, Request, Response } from "express";
-import sendResponse from "../utility/sendResponse";
+import sendResponse from "../utility/sendResponse.js";
 
 const requireFields = (...fields: string[]) => {
   return (req: Request, res: Response, next: NextFunction) => {

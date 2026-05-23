@@ -1,7 +1,7 @@
 import type { Request, Response } from "express";
-import { issuesService } from "./issues.service";
-import type { IRequestUser } from "../../types";
-import sendResponse from "../../utility/sendResponse";
+import { issuesService } from "./issues.service.js";
+import type { IRequestUser } from "../../types/index.js";
+import sendResponse from "../../utility/sendResponse.js";
 
 const createIssue = async (req: Request, res: Response) => {
   try {

@@ -1,8 +1,8 @@
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import config from "../../config";
-import type { INewUser } from "./auth.interface";
-import { pool } from "../../db";
+import config from "../../config/index.js";
+import type { INewUser } from "./auth.interface.js";
+import { pool } from "../../db/index.js";
 
 const createUser = async ({ name, email, password, role }: INewUser) => {
   const existing = await pool.query(`SELECT id FROM users WHERE email = $1`, [

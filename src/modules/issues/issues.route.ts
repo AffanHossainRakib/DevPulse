@@ -1,7 +1,7 @@
 import { Router } from "express";
-import auth from "../../middleware/auth";
-import requireFields from "../../middleware/validate";
-import { issuesController } from "./issues.controller";
+import auth from "../../middleware/auth.js";
+import requireFields from "../../middleware/validate.js";
+import { issuesController } from "./issues.controller.js";
 
 const router = Router();
 

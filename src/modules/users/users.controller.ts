@@ -1,7 +1,7 @@
 import type { Request, Response } from "express";
-import { usersService } from "./users.service";
-import type { IRequestUser } from "../../types";
-import sendResponse from "../../utility/sendResponse";
+import { usersService } from "./users.service.js";
+import type { IRequestUser } from "../../types/index.js";
+import sendResponse from "../../utility/sendResponse.js";
 
 const getMe = async (req: Request, res: Response) => {
   try {

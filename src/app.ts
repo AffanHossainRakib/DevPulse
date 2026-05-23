@@ -6,11 +6,11 @@ import express, {
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
-import authRouter from "./modules/auth/auth.route";
-import issuesRouter from "./modules/issues/issues.route";
-import usersRouter from "./modules/users/users.route";
-import { requestLogger } from "./middleware/logger";
-import globalErrorHandler from "./middleware/globalErrorHandler";
+import authRouter from "./modules/auth/auth.route.js";
+import issuesRouter from "./modules/issues/issues.route.js";
+import usersRouter from "./modules/users/users.route.js";
+import { requestLogger } from "./middleware/logger.js";
+import globalErrorHandler from "./middleware/globalErrorHandler.js";
 
 dotenv.config();
 

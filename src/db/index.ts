@@ -1,5 +1,5 @@
 import { Pool } from "pg";
-import config from "../config";
+import config from "../config/index.js";
 
 export const pool = new Pool({
   connectionString: config.connection_string,
@@ -35,5 +35,6 @@ export const initDB = async () => {
     console.log("Database connected successfully!");
   } catch (error) {
     console.error(error);
+    throw error;
   }
 };
