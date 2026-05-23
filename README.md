@@ -4,7 +4,7 @@ Minimal implementation of the assignment: authentication, issues, users, and pro
 
 Quick start
 
-1. Copy `.env.example` to `.env` and set `DATABASE_URL` (NeonDB provided).
+1. Copy `.env.example` to `.env` and set `CONNECTIONSTRING` (NeonDB provided).
 2. Install dependencies:
 
 ```bash
