@@ -1,4 +1,4 @@
-module.exports = async (req, res) => {
-  const { default: handler } = await import("../dist/serverless.js");
-  return handler(req, res);
-};
+export default async function handler(req, res) {
+  const { default: serverlessHandler } = await import("../dist/serverless.js");
+  return serverlessHandler(req, res);
+}
