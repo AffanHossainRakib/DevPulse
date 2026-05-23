@@ -9,9 +9,8 @@ import dotenv from "dotenv";
 import authRouter from "./modules/auth/auth.route";
 import issuesRouter from "./modules/issues/issues.route";
 import usersRouter from "./modules/users/users.route";
-import profileRouter from "./modules/profile/profile.route";
 import { requestLogger } from "./middleware/logger";
-import { globalErrorHandler } from "./middleware/globalErrorHandler";
+import globalErrorHandler from "./middleware/globalErrorHandler";
 
 dotenv.config();
 
@@ -31,7 +30,6 @@ app.get("/", (req: Request, res: Response) => {
 app.use("/api/auth", authRouter);
 app.use("/api/issues", issuesRouter);
 app.use("/api/users", usersRouter);
-app.use("/api/profile", profileRouter);
 
 app.use(globalErrorHandler);
 

@@ -4,8 +4,8 @@ import config from "./config";
 
 const main = async () => {
   await initDB();
-  app.listen(Number(config.PORT), () => {
-    console.log(`Server listening on http://localhost:${config.PORT}`);
+  app.listen(Number(config.port), () => {
+    console.log(`Server listening on http://localhost:${config.port}`);
   });
 };
 
